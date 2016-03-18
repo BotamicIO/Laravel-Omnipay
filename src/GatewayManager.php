@@ -44,7 +44,7 @@ class GatewayManager
      * @param \Omnipay\Common\GatewayFactory     $factory
      * @param  array
      */
-    public function __construct($app, GatewayFactory $factory, $defaults = array())
+    public function __construct($app, GatewayFactory $factory, $defaults = [])
     {
         $this->app = $app;
         $this->factory = $factory;
@@ -80,7 +80,7 @@ class GatewayManager
     {
         return array_merge(
             $this->defaults,
-            $this->app['config']->get('omnipay.gateways.'.$name, array())
+            $this->app['config']->get('omnipay.gateways.'.$name, [])
         );
     }
 

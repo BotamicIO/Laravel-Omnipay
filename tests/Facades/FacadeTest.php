@@ -13,8 +13,8 @@ namespace DraperStudio\Tests\Omnipay\Facades;
 
 use DraperStudio\Omnipay\Facades\Omnipay;
 use DraperStudio\Omnipay\GatewayManager;
-use GrahamCampbell\TestBenchCore\FacadeTrait;
 use DraperStudio\Tests\Omnipay\AbstractTestCase;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 /**
  * This is the facade test class.

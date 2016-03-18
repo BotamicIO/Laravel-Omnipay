@@ -2,19 +2,19 @@
 
 return [
 
-    /** The default gateway name */
+    /* The default gateway name */
     'gateway' => 'PayPal_Express',
 
-    /** The default settings, applied to all gateways */
+    /* The default settings, applied to all gateways */
     'defaults' => [
         'testMode' => false,
     ],
 
-    /** Gateway specific parameters */
+    /* Gateway specific parameters */
     'gateways' => [
         'PayPal_Express' => [
-            'username' => '',
-            'landingPage' => ['billing', 'login'], 
+            'username'    => '',
+            'landingPage' => ['billing', 'login'],
         ],
     ],
 
