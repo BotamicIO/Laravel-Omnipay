@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel Omnipay.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Omnipay;
 
 use Omnipay\Common\GatewayFactory;
@@ -48,7 +57,7 @@ class GatewayManager
     {
         $class = $class ?: $this->getDefaultGateway();
 
-        if (!isset($this->gateways[$class])) {
+        if (! isset($this->gateways[$class])) {
             $gateway = $this->factory->create($class, null, $this->app['request']);
 
             $gateway->initialize($this->getConfig($class));
