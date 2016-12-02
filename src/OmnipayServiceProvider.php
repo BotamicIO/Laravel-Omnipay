@@ -14,7 +14,7 @@ namespace BrianFaust\Omnipay;
 use BrianFaust\ServiceProvider\ServiceProvider as BaseProvider;
 use Omnipay\Common\GatewayFactory;
 
-class ServiceProvider extends BaseProvider
+class OmnipayServiceProvider extends BaseProvider
 {
     /**
      * Register the service provider.
