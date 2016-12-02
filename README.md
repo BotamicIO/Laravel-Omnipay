@@ -11,15 +11,13 @@ $ composer require faustbrian/laravel-omnipay
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Omnipay\ServiceProvider::class
-];
+BrianFaust\Omnipay\OmnipayServiceProvider::class
 ```
 
 ## Usage
 
 ``` php
-To-Do...
+...
 ```
 
 ## Security
