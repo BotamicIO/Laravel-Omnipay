@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Omnipay;
 
 use BrianFaust\ServiceProvider\ServiceProvider as BaseProvider;
@@ -19,7 +21,7 @@ class OmnipayServiceProvider extends BaseProvider
     /**
      * Register the service provider.
      */
-    public function register()
+    public function register(): void
     {
         parent::register();
 
@@ -37,7 +39,7 @@ class OmnipayServiceProvider extends BaseProvider
      *
      * @return array
      */
-    public function provides()
+    public function provides(): array
     {
         return array_merge(parent::provides(), ['omnipay']);
     }
@@ -47,7 +49,7 @@ class OmnipayServiceProvider extends BaseProvider
      *
      * @return string
      */
-    public function getPackageName()
+    public function getPackageName(): string
     {
         return 'omnipay';
     }
