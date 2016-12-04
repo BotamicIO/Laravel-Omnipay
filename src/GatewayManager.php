@@ -82,7 +82,7 @@ class GatewayManager
     /**
      * Get the configuration, based on the config and the defaults.
      */
-    protected function getConfig($name)
+    protected function getConfig($name): array
     {
         return array_merge(
             $this->defaults,
@@ -95,7 +95,7 @@ class GatewayManager
      *
      * @return string
      */
-    public function getDefaultGateway()
+    public function getDefaultGateway(): string
     {
         return $this->app['config']['omnipay.gateway'];
     }
@@ -105,7 +105,7 @@ class GatewayManager
      *
      * @param string $name
      */
-    public function setDefaultGateway($name)
+    public function setDefaultGateway($name): void
     {
         $this->app['config']['omnipay.gateway'] = $name;
     }
