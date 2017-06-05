@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Omnipay.
  *
@@ -22,36 +19,16 @@ class OmnipayServiceProvider extends BaseProvider
     /**
      * Register the service provider.
      */
-    public function register(): void
+    public function register()
     {
-        parent::register();
-
-        $this->publishConfig();
+        $this->publishes([
+            __DIR__.'/../config/laravel-omnipay.php' => config_path('laravel-omnipay.php'),
+        ], 'config');
 
         $this->app->singleton('omnipay', function ($app) {
-            $defaults = $app['config']->get('omnipay.defaults', []);
+            $defaults = $app['config']->get('laravel-omnipay.defaults', []);
 
             return new GatewayManager($app, new GatewayFactory(), $defaults);
         });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides(): array
-    {
-        return array_merge(parent::provides(), ['omnipay']);
-    }
-
-    /**
-     * Get the default package name.
-     *
-     * @return string
-     */
-    public function getPackageName(): string
-    {
-        return 'omnipay';
     }
 }

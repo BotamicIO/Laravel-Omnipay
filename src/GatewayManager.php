@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Omnipay.
  *
@@ -78,7 +75,7 @@ class GatewayManager
     {
         return array_merge(
             $this->defaults,
-            $this->app['config']->get('omnipay.gateways.'.$name, [])
+            $this->app['config']->get('laravel-omnipay.gateways.'.$name, [])
         );
     }
 
@@ -97,7 +94,7 @@ class GatewayManager
      *
      * @param string $name
      */
-    public function setDefaultGateway($name): void
+    public function setDefaultGateway($name)
     {
         $this->app['config']['omnipay.gateway'] = $name;
     }
