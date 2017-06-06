@@ -17,14 +17,20 @@ use Omnipay\Common\GatewayFactory;
 class OmnipayServiceProvider extends BaseProvider
 {
     /**
-     * Register the service provider.
+     * Bootstrap the application services.
      */
-    public function register()
+    public function boot()
     {
         $this->publishes([
             __DIR__.'/../config/laravel-omnipay.php' => config_path('laravel-omnipay.php'),
         ], 'config');
+    }
 
+    /**
+     * Register the service provider.
+     */
+    public function register()
+    {
         $this->app->singleton('omnipay', function ($app) {
             $defaults = $app['config']->get('laravel-omnipay.defaults', []);
 

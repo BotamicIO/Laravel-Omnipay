@@ -22,7 +22,7 @@ return [
     /* Gateway specific parameters */
     'gateways' => [
         'PayPal_Express' => [
-            'username'    => '',
+            'username' => '',
             'landingPage' => ['billing', 'login'],
         ],
     ],
