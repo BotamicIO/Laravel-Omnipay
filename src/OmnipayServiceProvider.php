@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Omnipay;
 
-use BrianFaust\ServiceProvider\ServiceProvider as BaseProvider;
 use Omnipay\Common\GatewayFactory;
+use BrianFaust\ServiceProvider\ServiceProvider as BaseProvider;
 
 class OmnipayServiceProvider extends BaseProvider
 {
