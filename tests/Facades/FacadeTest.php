@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Tests\Omnipay\Facades;
 
-use BrianFaust\Omnipay\Facades\Omnipay;
 use BrianFaust\Omnipay\GatewayManager;
-use BrianFaust\Tests\Omnipay\AbstractTestCase;
+use BrianFaust\Omnipay\Facades\Omnipay;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
+use BrianFaust\Tests\Omnipay\AbstractTestCase;
 
 class FacadeTest extends AbstractTestCase
 {
