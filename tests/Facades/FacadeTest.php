@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Tests\Omnipay\Facades;
 
-use BrianFaust\Omnipay\GatewayManager;
 use BrianFaust\Omnipay\Facades\Omnipay;
-use GrahamCampbell\TestBenchCore\FacadeTrait;
+use BrianFaust\Omnipay\GatewayManager;
 use BrianFaust\Tests\Omnipay\AbstractTestCase;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 class FacadeTest extends AbstractTestCase
 {
