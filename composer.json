@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-omnipay",
+    "name": "artisanry/omnipay",
     "description": "An Omnipay Bridge for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-Omnipay", "Laravel Omnipay", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Omnipay", "Laravel Omnipay"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Omnipay\\": "src"
+            "Artisanry\\Omnipay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Omnipay\\": "tests"
+            "Artisanry\\Tests\\Omnipay\\": "tests"
         }
     },
     "config": {
@@ -39,10 +39,10 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Omnipay\\OmnipayServiceProvider"
+                "Artisanry\\Omnipay\\OmnipayServiceProvider"
             ],
             "aliases": {
-                "Omnipay": "BrianFaust\\Omnipay\\Facades\\Omnipay"
+                "Omnipay": "Artisanry\\Omnipay\\Facades\\Omnipay"
             }
         }
     },

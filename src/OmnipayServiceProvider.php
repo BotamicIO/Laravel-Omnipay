@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Omnipay.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Omnipay;
+namespace Artisanry\Omnipay;
 
-use BrianFaust\ServiceProvider\ServiceProvider as BaseProvider;
+use Artisanry\ServiceProvider\ServiceProvider as BaseProvider;
 use Omnipay\Common\GatewayFactory;
 
 class OmnipayServiceProvider extends BaseProvider
